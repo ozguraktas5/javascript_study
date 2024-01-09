@@ -1,65 +1,65 @@
-let firstName = "Ebru",
-    lastName = "Taneli",
-    country = "Turkey",
-    city = "Bursa",
-    age = 29,
-    isMarried = false,
-    year = 2024
+// let firstName = "Ebru",
+//     lastName = "Taneli",
+//     country = "Turkey",
+//     city = "Bursa",
+//     age = 29,
+//     isMarried = false,
+//     year = 2024
 
-console.log(typeof firstName)
-console.log(typeof lastName)
-console.log(typeof country)
-console.log(typeof city)
-console.log(typeof age)
-console.log(typeof isMarried)
-console.log(typeof year)
+// console.log(typeof firstName)
+// console.log(typeof lastName)
+// console.log(typeof country)
+// console.log(typeof city)
+// console.log(typeof age)
+// console.log(typeof isMarried)
+// console.log(typeof year)
 
-console.log('10' === 10)
-console.log(parseInt('9.8') === 10)
+// console.log('10' === 10)
+// console.log(parseInt('9.8') === 10)
 
-console.log(Boolean(1))
-console.log(Boolean("1"))
-console.log(Boolean("merhaba"))
+// console.log(Boolean(1))
+// console.log(Boolean("1"))
+// console.log(Boolean("merhaba"))
 
-console.log(Boolean(0))
-console.log(Boolean(""))
-console.log(Boolean(null))
+// console.log(Boolean(0))
+// console.log(Boolean(""))
+// console.log(Boolean(null))
 
-console.log(4 > 3)
-console.log(4 >= 3)
-console.log(4 < 3)
-console.log(4 <= 3)
-console.log(4 == 4)
-console.log(4 === 4)
-console.log(4 != 4)
-console.log(4 !== 4)
-console.log(4 != "4")
-console.log(4 == '4')
-console.log(4 === '4')
-console.log(("python".length) > ("jargon".length))
+// console.log(4 > 3)
+// console.log(4 >= 3)
+// console.log(4 < 3)
+// console.log(4 <= 3)
+// console.log(4 == 4)
+// console.log(4 === 4)
+// console.log(4 != 4)
+// console.log(4 !== 4)
+// console.log(4 != "4")
+// console.log(4 == '4')
+// console.log(4 === '4')
+// console.log(("python".length) > ("jargon".length))
 
-console.log(4 > 3 && 10 < 12)
-console.log(4 > 3 && 10 > 12)
-console.log(4 > 3 || 10 < 12)
-console.log(4 > 3 || 10 > 12)
-console.log(!(4 > 3))
-console.log(!(4 < 3))
-console.log(!(false))
-console.log(!(4 > 3 && 10 < 12))
-console.log(!(4 > 3 && 10 > 12))
-console.log(!(4 === '4'))
-console.log((!"dragon".includes("on") && !"python".includes("on")))
+// console.log(4 > 3 && 10 < 12)
+// console.log(4 > 3 && 10 > 12)
+// console.log(4 > 3 || 10 < 12)
+// console.log(4 > 3 || 10 > 12)
+// console.log(!(4 > 3))
+// console.log(!(4 < 3))
+// console.log(!(false))
+// console.log(!(4 > 3 && 10 < 12))
+// console.log(!(4 > 3 && 10 > 12))
+// console.log(!(4 === '4'))
+// console.log((!"dragon".includes("on") && !"python".includes("on")))
 
-const now = new Date()
-console.log(now.getFullYear())
-console.log(now.getMonth()+1)
-console.log(now.getDay())
-console.log(now.getHours() + ":" + now.getMinutes())
-console.log(now.getMinutes())
-let suAn = new Date();
-let ocak1970 = new Date(0);
-let gecenSure = (suAn - ocak1970) / 1000;
-console.log(gecenSure)
+// const now = new Date()
+// console.log(now.getFullYear())
+// console.log(now.getMonth()+1)
+// console.log(now.getDay())
+// console.log(now.getHours() + ":" + now.getMinutes())
+// console.log(now.getMinutes())
+// let suAn = new Date();
+// let ocak1970 = new Date(0);
+// let gecenSure = (suAn - ocak1970) / 1000;
+// console.log(gecenSure)
 
 // let base = prompt("Enter base:")
 // console.log(`Enter base: ${base}`)
@@ -113,23 +113,63 @@ console.log(gecenSure)
 // let egim = (y2-y1) / (x2-x1)
 // console.log(`Egim: ${egim}`)
 
-function hesaplaY(x) {
-    return Math.pow(x, 2) + 6 * x + 9;
+// function hesaplaY(x) {
+//     return Math.pow(x, 2) + 6 * x + 9;
+// }
+
+// let xDegerleri = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5];
+
+// // Y'yi hesapla ve sonuçları konsola yazdır
+// for (let i = 0; i < xDegerleri.length; i++) {
+//     let x = xDegerleri[i];
+//     let y = hesaplaY(x);
+//     console.log("x = " + x + ", y = " + y);
+
+//     // y'nin 0 olduğu durumu kontrol et
+//     if (y === 0) {
+//         console.log("y'nin 0 olduğu x değeri: " + x);
+//     }
+// }
+
+// let saat = prompt("Enter hours:")
+// console.log(`Enter hours: ${saat}`)
+// let saatBasinaOran = prompt("Enter rate per hour:")
+// console.log(`Enter rate per hour: ${saatBasinaOran}`)
+// let kisininUcreti = saat * saatBasinaOran 
+// console.log(`Your weekly earning is ${kisininUcreti}`)
+
+// let ad = prompt("Adinizi girin:")
+// ad.length > 7
+//     ? console.log("Uzun")
+//     : console.log("Kısa")
+
+// let firstName = 'Ozgur'
+// let lastName = 'Bak'
+
+// firstName.length > lastName.length
+//     ? console.log(`Your first name, ${firstName} is longer than your family name, ${lastName}`)
+//     : console.log(`Your family name, ${lastName} is longer than your first name, ${firstName}`)
+
+// let myAge = 250;
+// let yourAge = 25
+
+// console.log(`I am ${myAge-yourAge} years older than you.`)
+
+const now = new Date();
+let dogduguYil = prompt("Doğduğunuz yılı giriniz:");
+
+// Kullanıcının girişini kontrol et
+if (isNaN(parseInt(dogduguYil))) {
+    console.log("Geçerli bir yıl giriniz.");
+} else {
+    parseInt(dogduguYil) <= now.getFullYear() - 18
+        ? console.log(`Yaşınız: ${now.getFullYear() - parseInt(dogduguYil)}. Ehliyet alabilirsiniz.`)
+        : console.log(`Yaşınız: ${now.getFullYear() - parseInt(dogduguYil)}. Ehliyet almak için 18 yaşından büyük olmalısınız.`);
 }
 
-let xDegerleri = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5];
 
-// Y'yi hesapla ve sonuçları konsola yazdır
-for (let i = 0; i < xDegerleri.length; i++) {
-    let x = xDegerleri[i];
-    let y = hesaplaY(x);
-    console.log("x = " + x + ", y = " + y);
 
-    // y'nin 0 olduğu durumu kontrol et
-    if (y === 0) {
-        console.log("y'nin 0 olduğu x değeri: " + x);
-    }
-}
+
 
 
 
