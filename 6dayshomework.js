@@ -203,6 +203,14 @@ const countriesFiveCharacter = countries4.reduce((accumulator, currentCountry) =
 
 console.log(countriesFiveCharacter)
 
+const sortedCountries = [...countries]
+
+console.log(countries)
+console.log(sortedCountries.sort())
+
+console.log(webTechs.sort())
+console.log(mernStack.sort())
+
 
 
 
