@@ -114,3 +114,97 @@ for(let e = 0; e < 101; e++) {
 }
 
 console.log(`Çift sayıların toplamı ${ciftTopla}\nTek sayıların toplamı ${tekTopla} `)
+
+function randomId (length = 8) {
+  const characters ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+  let result = ""
+
+  for(let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length)
+    result += characters[randomIndex]
+  }
+  return result
+} 
+
+const result = randomId()
+console.log(result)
+
+function randomHexa (length = 6) {
+  const characters ='0123456789abcdef'
+  let result2 = "#"
+  
+  for(let i = 0; i < length; i++) {
+    const randomHexaIndex = Math.floor(Math.random() * characters.length)
+    result2 += characters[randomHexaIndex]
+  }
+  return result2
+} 
+
+const result2 = randomHexa()
+console.log(result2)
+
+function randomRgb () {
+  const r = Math.floor(Math.random() * 256)
+  const g = Math.floor(Math.random() * 256)
+  const b = Math.floor(Math.random() * 256)
+  return `rgb(${r},${g},${b})`
+}
+
+const result3 = randomRgb()
+console.log(result3)
+
+countries4 = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+
+let countriesArray = []
+
+for(let i = 0; i < countries4.length; i++) {
+  const randomIndex = Math.floor(Math.random() * countries4.length)
+  countriesArray.push(countries4[randomIndex])
+}
+
+console.log(countriesArray)
+
+let arrayLength = []
+
+for (let i = 0; i < countries4.length; i++) {
+  arrayLength.push(countries4[i].length)
+}
+
+console.log(arrayLength)
+
+const yeniDizi = countries4.map(country => {
+  const formatCountry = country.charAt(0) + country.slice(1).toLowerCase()
+  const countryCode = country.substring(0,3)
+  const countryLength = country.length
+
+  return [formatCountry, countryCode, countryLength]
+});
+
+console.log(yeniDizi)
+
+const countriesLand = countries4.filter(country => country.toLowerCase().includes("land"))
+console.log(countriesLand)
+
+const countriesIa = countries4.filter(country => country.toLowerCase().includes("ia"))
+console.log(countriesIa)
+
+const maxLength = countries4.reduce((currentCountry, maxCountry) => {
+  return currentCountry.length > maxCountry.length ? currentCountry : maxCountry
+})
+
+console.log(maxLength)
+
+const countriesFiveCharacter = countries4.reduce((accumulator, currentCountry) => {
+  if (currentCountry.length === 5) {
+    accumulator.push(currentCountry)
+  }
+  return accumulator
+}, [])
+
+console.log(countriesFiveCharacter)
+
+
+
+
+
+
