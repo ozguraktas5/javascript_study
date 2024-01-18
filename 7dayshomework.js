@@ -196,3 +196,56 @@ function capitalizeArray(inputArray) {
 }
 
 console.log(capitalizeArray(['apple','banana','orange']))
+
+let bosArray = []
+
+function addItem(item) {
+    bosArray.push(item)
+    return bosArray
+}
+
+console.log(addItem('apple'))
+console.log(addItem('orange'))
+
+let doluArray = ["apple","banana","orange"]
+
+function removeItem(indexRemove) {
+    doluArray.splice(indexRemove,1);
+    return doluArray
+}
+
+console.log(removeItem(0))
+
+let sum = 0
+function sumOfNumbers(number1,number2) {
+    for(let i = number1; i <= number2; i++) {
+        sum += i
+    }
+    return sum
+}
+
+console.log(sumOfNumbers(1,5))
+
+let sumOdd = 0
+function sumOfOdds(number1,number2) {
+    for(let i = number1; i <= number2; i++) {
+        if(i % 2 !== 0) {
+            sumOdd += i
+        }
+    }
+    return sumOdd
+}
+
+console.log(sumOfOdds(1,5))
+
+let sumEven = 0
+function sumOfEven(number1,number2) {
+    for(let i = number1; i <= number2; i++) {
+        if(i % 2 === 0) {
+            sumEven += i
+        }
+    }
+    return sumEven
+}
+
+console.log(sumOfEven(1,5))
