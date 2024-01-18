@@ -249,3 +249,38 @@ function sumOfEven(number1,number2) {
 }
 
 console.log(sumOfEven(1,5))
+let evenNumber = 0
+let oddNumber = 0
+function evensAndOdds(number) {
+    for(let i = 0; i <= number; i++) {
+        if(i % 2 === 0) {
+            evenNumber += 1
+        } else {
+            oddNumber += 1
+        }
+    }
+    return `The number of odds are ${oddNumber}\nThe number of evens are ${evenNumber}`
+}
+
+console.log(evensAndOdds(100))
+
+let toplam = 0
+function toplamArguman(args) {
+    for(let i = 0; i <= args; i++) {
+        toplam += i
+    }
+    return toplam
+}
+
+console.log(toplamArguman(5))
+
+function generateRandomIP() {
+    const number1 = Math.floor(Math.random() * 256)
+    const number2 = Math.floor(Math.random() * 256)
+    const number3 = Math.floor(Math.random() * 256)
+    const number4 = Math.floor(Math.random() * 256)
+
+    return `${number1}.${number2}.${number3}.${number4}`
+}
+
+console.log(generateRandomIP())
