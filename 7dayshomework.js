@@ -112,3 +112,87 @@ function findMax(no1, no2, no3) {
 }
 
 console.log(findMax(124,346,457))
+
+function solveLinEquation(a, b, c, x, y) {
+    result = a * x + b * y + c  
+    return result
+}
+
+console.log(solveLinEquation(1,2,3,4,5))
+
+function solveQuadEquation(a, b, c) {
+    const diskriminant = b ** 2 - 4 * a * c;
+
+    if (diskriminant > 0) {
+        const kok1 = (-b - Math.sqrt(diskriminant)) / ( 2 * a);
+        const kok2 = (-b + Math.sqrt(diskriminant)) / ( 2 * a);
+        return [kok1, kok2]
+    } else if (diskriminant === 0) {
+        const kok = -b / (2 * a)
+        return [kok]
+    } else {
+        const gercekKisim = -b / (2 * a);
+        const hayaliKisim = Math.sqrt(Math.abs(diskriminant)) / (2 * a);
+        const kok1 = `${gercekKisim} - ${hayaliKisim}i`
+        const kok2 = `${gercekKisim} + ${hayaliKisim}i`
+        return [kok1, kok2]
+    }
+}
+
+console.log(solveQuadEquation(1,-1,-2))
+
+function printArray([...args]) {
+    for(let i= 0; i < args.length; i++) {
+        console.log(args[i])
+    }
+}
+
+printArray([1,2,3,4,5])
+
+function showDateTime() {
+    let date = new Date();
+    let day = date.getDay()
+    let month = date.getMonth() + 1
+    let year = date.getFullYear()
+    let hour = date.getHours()
+    let seconds = date.getSeconds()
+    return `${month}/${day}/${year} ${hour}:${seconds}`
+}
+
+console.log(showDateTime())
+
+function swapValues(a, b) {
+    a, b = b, a
+    return [b,a]
+}
+
+console.log(swapValues(10,20))
+
+let emptyArray = []
+function reverseArray([...args]) {
+    for(let i = args.length-1; i >= 0; i--) {
+        emptyArray.push(args[i])
+    }
+    return emptyArray
+}
+
+console.log(reverseArray([1,2,3,4,5]))
+
+function capitalizeArray(inputArray) {
+    if(!Array(inputArray)) {
+        console.error('Input is not an array')
+    }
+
+    const capitalizeArray = inputArray.map(item => {
+        if (typeof item !== 'string') {
+            console.error("Non-string element found in the array.")
+            return item
+        }
+
+        return item.charAt(0).toUpperCase() + item.slice(1)
+    })
+
+    return capitalizeArray
+}
+
+console.log(capitalizeArray(['apple','banana','orange']))
