@@ -86,3 +86,29 @@ function bodyMassIndex(weight, height) {
 }
 
 console.log(bodyMassIndex(82,1.71))
+
+function checkSeason(month) {
+    if (month == "December" || month == "January" || month == "February") {
+        return "Winter"
+    } else if (month == "March" || month == "April" || month == "May") {
+        return "Spring"
+    } else if (month == "June" || month == "July" || month == "August") {
+        return "Summer"
+    } else if (month == "September" || month == "October" || month == "November") {
+        return "Autumn"
+    }
+}
+
+console.log(checkSeason("June"))
+
+function findMax(no1, no2, no3) {
+    if (no1 > no2 && no1 > no3) {
+        return no1
+    } else if (no2 > no1 && no2 > no3) {
+        return no2
+    } else if (no3 > no1 && no3 > no2) {
+        return no3
+    }
+}
+
+console.log(findMax(124,346,457))
