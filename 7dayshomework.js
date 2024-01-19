@@ -356,3 +356,40 @@ function arrayOfRgbColors(count) {
 }
 
 console.log(arrayOfRgbColors(3))
+
+function convertHexaToRgb(hexaColor) {
+    hexaColor = hexaColor.replace(/^#/,'')
+
+    let red = parseInt(hexaColor.substring(0,2), 16)
+    let green = parseInt(hexaColor.substring(2,4), 16)
+    let blue = parseInt(hexaColor.substring(4,6), 16)
+
+    let rgbColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+
+    return rgbColor
+}
+
+let hexaColor = "#673a54";
+
+console.log(convertHexaToRgb(hexaColor))
+
+function convertRgbToHexa(rgbColor) {
+    let regexResult = rgbColor.match(/\d+/g)
+
+    if (!regexResult || regexResult.length !== 3) {
+        console.error("Geçersiz RGB renk kodu. Örnek: 'rgb(158, 25, 85)'")
+        return null
+    }
+
+    let red = parseInt(regexResult[0])
+    let green = parseInt(regexResult[1])
+    let blue = parseInt(regexResult[2])
+
+    let hexaColor = "#" + red + green + blue;
+
+    return hexaColor
+}
+
+let rgbColor = "rgb(58, 25, 85)";
+
+console.log(convertRgbToHexa(rgbColor))
