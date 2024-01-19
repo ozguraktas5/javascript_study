@@ -284,3 +284,75 @@ function generateRandomIP() {
 }
 
 console.log(generateRandomIP())
+
+function userIdGeneratedByUser() {
+    let characterCountInput = prompt("Please enter the number of characters")
+    let userIdCountInput = prompt("Please enter the number of IDs to be generated")
+
+    if (!characterCountInput || !userIdCountInput) {
+        console.error("You have not made valid entries. Please try again.")
+        return
+    }
+
+    let characterCount = parseInt(characterCountInput)
+    let userIdCount = parseInt(userIdCountInput)
+
+    if (isNaN(characterCount) || isNaN(userIdCount)) {
+        console.error("You have not made valid entries. Please try again.")
+        return
+    }
+
+    for (let i = 0; i < userIdCount; i++) {
+        let userId = generateUserId(characterCount)
+        console.log("Generated ID: " + userId)
+    }
+}
+
+function generateUserId(characterCount) {
+    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let userId = "";
+
+    for (let i = 0; i < characterCount; i++) {
+        var randomIndex = Math.floor(Math.random() * characters.length)
+        userId += characters.charAt(randomIndex)
+    }
+
+    return userId
+}
+
+//userIdGeneratedByUser()
+
+
+function rgbColorGenerator() {
+    let randomNumber1 = Math.floor(Math.random() * 256)
+    let randomNumber2 = Math.floor(Math.random() * 256)
+    let randomNumber3 = Math.floor(Math.random() * 256)
+
+    return `rgb(${randomNumber1},${randomNumber2},${randomNumber3})`
+}
+
+console.log(rgbColorGenerator())
+
+function arrayOfHexaColors(length) {
+    let characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+    let result = "#"
+
+    for (let i = 0; i < length; i++) {
+        let randomIndex = Math.floor(Math.random() * characters.length)
+        result += characters.charAt(randomIndex)
+    }
+
+    return result
+}
+
+console.log(arrayOfHexaColors(1))
+
+function arrayOfRgbColors(count) {
+    let result = []
+    for (let i = 0; i < count; i++) {
+        result.push(`rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`)
+    }
+    return result
+}
+
+console.log(arrayOfRgbColors(3))
