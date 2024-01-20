@@ -508,4 +508,17 @@ function modifyArray(array) {
     return array
 }
 
-console.log(modifyArray([1,2,3,4,5,6]))
+console.log(modifyArray(["a","b","c","d","e","f"]))
+
+function isPrime(number) {
+  isPrime = true
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) {
+      isPrime = false
+    }
+    
+  }
+  return isPrime
+}
+
+console.log(isPrime(7))
