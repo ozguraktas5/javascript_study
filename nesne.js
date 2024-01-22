@@ -179,4 +179,29 @@ for (const userName in users) {
 
 console.log(loggedUsersCount)
 
+// let mernUser = []
 
+// for (const userName in users) {
+//     const user = users[userName];
+
+//     if (user.skills.includes('MongoDB')) {
+//       mernUser.push(user)
+//     }
+// }
+
+// console.log(mernUser)
+
+const mernUser = Object.values(users).filter(user => 
+    user.skills.includes('MongoDB') &&
+    user.skills.includes('Express') &&
+    user.skills.includes('React') &&
+    user.skills.includes('Node') 
+)
+
+console.log(mernUser)
+
+const copyUser = Object.assign({}, users)
+console.log(copyUser)
+
+copyUser["Alex"] = "Ozgur"
+console.log(copyUser)
