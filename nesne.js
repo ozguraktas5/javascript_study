@@ -23,7 +23,7 @@ console.log(person.lastName)
 console.log(person['age'])
 console.log(person["phone number"])
 
-console.log(person.getFullName)
+console.log(person.getFullName())
 
 person.nationality = 'German'
 person.country = 'Germany'
@@ -77,4 +77,27 @@ console.log(entries)
 
 console.log(copyPerson.hasOwnProperty('name'))
 console.log(copyPerson.hasOwnProperty('score'))
+
+const dog = {};
+console.log(dog)
+
+dog.name = "Lucy"
+dog.legs = "Short"
+dog.color = "Brown"
+dog.age = 4
+
+console.log(dog)
+
+dog.bark = function() {
+    console.log("Woof Woof!")
+}
+
+console.log(dog)
+
+dog.breed = "Terrier"
+dog.getDogInfo = function() {
+    return `My dog name is ${this.name}. It is ${this.age} years old.`
+}
+
+console.log(dog.getDogInfo())
 
