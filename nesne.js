@@ -337,3 +337,31 @@ const products3 = [
     likes: ["fg12cy"],
   },
 ];
+
+function signUp (username, email, password) {
+  const existingUser = users3.find(user => user.username === username || user.email === email);
+
+  if (existingUser) {
+    console.log('Bu kullanicinin hesabi var.')
+    return 
+  }
+
+  const newUser = {
+    _id: generateId(),
+    username,
+    email,
+    password,
+    createdAt: new Date().toLocaleString(),
+    isLoggedIn: false
+  };
+
+  users3.push(newUser)
+  console.log('Kullanici basariyla kaydedildi.')
+}
+
+function generateId() {
+  return Math.random().toString(36).substring(2,8)
+}
+
+signUp('OzgurAktas','ozgur123@gmail.com','12345')
+console.log(users3)
