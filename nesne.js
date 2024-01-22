@@ -72,3 +72,9 @@ console.log(keys)
 const values = Object.values(copyPerson)
 console.log(values)
 
+const entries = Object.entries(copyPerson)
+console.log(entries)
+
+console.log(copyPerson.hasOwnProperty('name'))
+console.log(copyPerson.hasOwnProperty('score'))
+
