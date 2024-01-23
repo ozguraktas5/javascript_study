@@ -64,3 +64,31 @@ console.log(sum)
 
 const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland']
 countries.forEach(country => console.log(country.toUpperCase()))
+
+const numbers3 = [1,2,3,4,5]
+const numbersSquare = numbers3.map(num => num ** 2)
+console.log(numbers3)
+console.log(numbersSquare)
+
+const names = ['Ozgur', 'Alev', 'Ebru', 'Murat']
+const namesUpper = names.map((item) => item.toUpperCase())
+
+console.log(names)
+console.log(namesUpper)
+
+const countries2 = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya',
+]
+
+const countriesThreeLetter = countries2.map((item) => item.slice(0,3).toUpperCase())
+console.log(countriesThreeLetter)
