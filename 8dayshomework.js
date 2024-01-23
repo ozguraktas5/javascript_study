@@ -307,3 +307,50 @@ function signIn(username, password) {
 
 signIn('OzgurAktas','12345')
 console.log(users3)
+
+function rateProduct (userId, productId, rating) {
+    const user = users3.find(user => user._id === userId)
+    const product = products3.find(product => product._id === productId)
+
+    if (user && product) {
+        const existingRatingIndex = product.ratings.findIndex(r => r.userId === userId)
+
+        if (existingRatingIndex !== -1) {
+            product.ratings[existingRatingIndex].rate = rating;
+            console.log(`${user.username} updated the rating for ${product.name}.`)
+        } else {
+            product.ratings.push({ userId, rate: rating })
+        }
+    } else {
+        console.log(`User or product not found. Please check your user ID and product ID.`)
+    }
+}
+
+console.log(products3)
+rateProduct('fg12cy', 'eedfcf', 4.8);
+console.log(products3)
+
+function averageRating(productId) {
+    const product = products3.find(product => product._id === productId)
+
+    if (product) {
+        const totalRatings = product.ratings.length
+
+        if (totalRatings === 0) {
+            console.log(`There are no ratings for ${product.name}.`)
+            return 0
+        }
+
+        const sumOfRatings = product.ratings.reduce((sum, rating) => sum + rating.rate, 0)
+        const average = sumOfRatings / totalRatings
+
+        console.log(`Average rating for ${product.name}: ${average.toFixed(2)}`)
+        return average
+    } else {
+        console.log(`Product not found. Please check your product ID.`)
+        return null
+
+    }
+}
+
+averageRating('eedfcf')
