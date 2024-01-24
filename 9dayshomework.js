@@ -65,3 +65,24 @@ console.log(getStringLists(array1));
 
 const sum = numbers.reduce((acc, item) => acc + item, 0)
 console.log(sum)
+
+const countryBilesim = countries.reduce((acc, country) => acc + " " + country, "Estonia")
+console.log(countryBilesim)
+
+const namesSeven = names.some((item) => item.length > 7)
+console.log(namesSeven)
+
+const allCountryLand = countries.every(country => country.includes("land"))
+console.log(allCountryLand)
+
+const countryFindSix = countries.find((item) => item.length === 6)
+console.log(countryFindSix)
+
+const countryFindSixIndex = countries.findIndex(country => country.length === 6)
+console.log(countryFindSixIndex) 
+
+const countryNorway = countries.findIndex(country => country === "Norway")
+console.log(countryNorway)
+
+const countryRussia = countries.findIndex(country => country === "Russia")
+console.log(countryRussia)
