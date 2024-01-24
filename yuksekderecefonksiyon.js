@@ -141,3 +141,35 @@ console.log(someTrue)
 const areAllString = names2.some((item) => typeof(item) === 'number')
 console.log(areAllString)
 
+const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
+console.log(products.sort())
+
+const numbers5 = [9.81, 3.14, 100, 37]
+console.log(numbers5.sort()) // Hatalı değerler verir
+
+numbers5.sort(function (a,b) {
+    return a - b
+})
+
+console.log(numbers5)
+
+numbers5.sort(function (a,b) {
+    return b - a
+})
+
+console.log(numbers5)
+
+const users = [
+  { name: 'Asabeneh', age: 150 },
+  { name: 'Brook', age: 50 },
+  { name: 'Eyob', age: 100 },
+  { name: 'Elias', age: 22 },
+]
+
+users.sort((a, b) => {
+    if(a.age < b.age) return -1
+    if(a.age > b.age) return 1
+    return 0
+})
+
+console.log(users)
