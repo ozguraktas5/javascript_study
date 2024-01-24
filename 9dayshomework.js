@@ -44,3 +44,24 @@ console.log(countryLand)
 
 const countrySix = countries.filter((item) => item.length === 6)
 console.log(countrySix)
+
+const country = countries.filter((item) => item.length >= 6)
+console.log(country)
+
+const countryStartE = countries.filter((item) => item.startsWith("E"))
+console.log(countryStartE)
+
+const productValues = products.filter((item) => item.price !== " " && item.price !== "")
+console.log(productValues)
+
+function getStringLists(array) {
+    const stringArray = array.filter(item => typeof(item) === 'string')
+    return stringArray
+}
+
+const array1 = ['kivi', 235, 12, 'elma', true, {"bir":1, "iki":2, "uc":3}];
+console.log(getStringLists(array1));
+
+
+const sum = numbers.reduce((acc, item) => acc + item, 0)
+console.log(sum)
