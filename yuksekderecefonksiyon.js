@@ -92,3 +92,24 @@ const countries2 = [
 
 const countriesThreeLetter = countries2.map((item) => item.slice(0,3).toUpperCase())
 console.log(countriesThreeLetter)
+
+const countriesLand = countries2.filter((item) => item.includes("land"))
+console.log(countriesLand)
+
+const countriesEndsIa = countries2.filter((item) => item.endsWith("ia"))
+console.log(countriesEndsIa)
+
+const countriesLengthFive = countries2.filter((item) => item.length === 5)
+console.log(countriesLengthFive)
+
+const scores = [
+  { name: 'Asabeneh', score: 95 },
+   { name: 'Lidiya', score: 98 },
+  { name: 'Mathias', score: 80 },
+  { name: 'Elias', score: 50 },
+  { name: 'Martha', score: 85 },
+  { name: 'John', score: 100 },
+]
+
+const scoresGreaterEighty = scores.filter((score) => score.score > 80)
+console.log(scoresGreaterEighty)
