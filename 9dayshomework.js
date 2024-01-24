@@ -32,3 +32,15 @@ const numbersSquare = numbers.map((item) => {
     return item ** 2
 })
 console.log(numbersSquare)
+
+const namesUpperCase = names.map(name => name.toUpperCase())
+console.log(namesUpperCase)
+
+const productPrice = products.map(product => product.price)
+console.log(productPrice)
+
+const countryLand = countries.filter((country) => country.includes("land"))
+console.log(countryLand)
+
+const countrySix = countries.filter((item) => item.length === 6)
+console.log(countrySix)
