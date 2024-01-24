@@ -129,5 +129,15 @@ console.log(age)
 const result = names2.find((item) => item.length < 5)
 console.log(result) // Sadece Alev'i döndürür
 
+const result2 = names2.findIndex((item) => item.length < 5)
+console.log(result2)
 
+const age2 = ages.findIndex((item) => item < 20)
+console.log(age2)
+
+const bools = [true, true, true, true]
+const someTrue = bools.some((item) => item === true)
+console.log(someTrue)
+const areAllString = names2.some((item) => typeof(item) === 'number')
+console.log(areAllString)
 
