@@ -113,3 +113,21 @@ const scores = [
 
 const scoresGreaterEighty = scores.filter((score) => score.score > 80)
 console.log(scoresGreaterEighty)
+
+const numbers4 = [1, 2, 3, 4, 5]
+const sum4 = numbers4.reduce((acc, cur) => acc + cur, 0)
+console.log(sum4)
+
+const names2 = ['Ozgur', 'Alev', 'Ebru', 'Murat']
+const isstring = names2.every((item) => typeof(item) === 'string')
+console.log(isstring)
+
+const ages = [24, 22, 25, 32, 35, 18]
+const age = ages.find((item) => item < 20)
+console.log(age)
+
+const result = names2.find((item) => item.length < 5)
+console.log(result) // Sadece Alev'i döndürür
+
+
+
