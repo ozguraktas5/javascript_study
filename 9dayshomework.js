@@ -86,3 +86,17 @@ console.log(countryNorway)
 
 const countryRussia = countries.findIndex(country => country === "Russia")
 console.log(countryRussia)
+
+const sumPrice = products.map((item) => item.price).filter((item) => typeof(item) === 'number').reduce((acc, cur) => acc + cur, 0)
+console.log(sumPrice)
+
+const sumPrice2 = products.reduce((acc, cur) => {
+    const price = parseInt(cur.price)
+    if (!isNaN(price)) {
+        return acc + price
+    }
+    return acc
+}, 0)
+
+console.log(sumPrice2)
+
