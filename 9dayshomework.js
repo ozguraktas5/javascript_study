@@ -173,3 +173,15 @@ function getLastTenCountries(countryList) {
 
 console.log(getLastTenCountries(countries2))
 
+import countries_data from "./countries_data.js";
+
+const regionSort = countries_data.map(item => item.region)
+console.log(regionSort.sort())
+
+const capitalSort = countries_data.map(item => item.capital)
+console.log(capitalSort.sort())
+
+const populationSort = countries_data.map(item => item.population)
+console.log(populationSort.sort((a, b) => a - b))
+
+
