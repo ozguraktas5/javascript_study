@@ -147,3 +147,29 @@ function getObject(countryList) {
 
 console.log(getObject(countries2))
 
+function getFirstTenCountries(countryList) {
+    const emptyArray = []
+
+    for(let i = 0; i < countryList.length; i++) {
+        if(i < 10) {
+            emptyArray.push(countryList[i])
+        }
+    } 
+    return emptyArray
+}
+
+console.log(getFirstTenCountries(countries2))
+
+function getLastTenCountries(countryList) {
+    const emptyArray = []
+
+    for(let i = countryList.length - 1; i >= 0; i--) {
+        if(i > 0) {
+            emptyArray.push(countryList[i])
+        }
+    } 
+    return emptyArray
+}
+
+console.log(getLastTenCountries(countries2))
+
