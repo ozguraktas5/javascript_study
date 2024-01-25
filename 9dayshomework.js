@@ -1,4 +1,27 @@
 const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+const countries2 = [
+  "Albania",
+
+  "Bolivia",
+
+  "Canada",
+
+  "Denmark",
+
+  "Ethiopia",
+
+  "Finland",
+
+  "Germany",
+
+  "Hungary",
+
+  "Ireland",
+
+  "Japan",
+
+  "Kenya",
+];
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const products = [
@@ -99,4 +122,28 @@ const sumPrice2 = products.reduce((acc, cur) => {
 }, 0)
 
 console.log(sumPrice2)
+
+const countriesLand = countries2.map((item) => item.includes("land"))
+console.log(countriesLand)
+
+function getObject(countryList) {
+    const result = []
+
+    for(let i = 0; i < countryList.length; i++) {
+        const countryName = countryList[i]
+        const firstLetter = countryName.charAt(0).toLowerCase()
+        const letterCount = countryName.length
+
+        const object = {
+            "Country Name": countryName,
+            "First Letter": firstLetter,
+            "Letter Count": letterCount
+        }
+
+        result.push(object)
+    }
+    return result
+}
+
+console.log(getObject(countries2))
 
