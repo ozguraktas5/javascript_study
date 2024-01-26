@@ -55,3 +55,14 @@ let differentBB = bb.filter((num) => !AA.has(num))
 
 console.log(differentAA)
 console.log(differentBB)
+
+import countries_data from "./countries_data.js"
+
+const countriesDataLength = countries_data.map((item) => item.languages.length)
+
+let sum = 0
+for (const language of countriesDataLength) {
+  sum += language
+}
+
+console.log(sum)
