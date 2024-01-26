@@ -64,3 +64,28 @@ for(const l of langSet) {
 }
 
 console.log(counts)
+
+const numbers = [5, 3, 2, 5, 5, 9, 4, 5]
+const setNumbers = new Set(numbers)
+
+console.log(setNumbers)
+
+let a = [1, 2, 3, 4, 5]
+let b = [3, 4, 5, 6]
+let c = [...a, ...b]
+
+console.log(c)
+
+let A = new Set(a)
+let B = new Set(b)
+
+let C = a.filter((num) => B.has(num))
+
+console.log(C)
+
+let differentA = a.filter((num) => !B.has(num))
+let differentB = b.filter((num) => !A.has(num))
+
+console.log(differentA)
+console.log(differentB)
+
