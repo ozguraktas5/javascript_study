@@ -89,3 +89,26 @@ let differentB = b.filter((num) => !A.has(num))
 console.log(differentA)
 console.log(differentB)
 
+const map = new Map()
+console.log(map)
+
+countries = [
+  ['Finland', 'Helsinki'],
+  ['Sweden', 'Stockholm'],
+  ['Norway', 'Oslo'],
+]
+
+const countriesMap = new Map(countries)
+console.log(countriesMap)
+console.log(countriesMap.size)
+
+const countriesMap2 = new Map()
+console.log(countriesMap2)
+countriesMap2.set('Turkey', 'Ankara')
+countriesMap2.set('Germany', 'Berlin')
+countriesMap2.set('Paris', 'France')
+console.log(countriesMap2)
+
+console.log(countriesMap2.get('Germany'))
+
+
