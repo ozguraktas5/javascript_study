@@ -129,7 +129,77 @@ const getPersonInfo = (object) => {
     skills[skills.length - 1]
   }. He speaks ${formattedLanguages} and a little bit of ${languages[1]}. `;
 
-  return personInfo
+  return personInfo;
 };
 
 console.log(getPersonInfo(person));
+
+const calculatePerimeter2 = ({ width, height }) => {
+  return 2 * (width + height);
+};
+
+console.log(calculatePerimeter2(rect));
+
+const getPersonInfo2 = ({
+  firstName,
+  lastName,
+  age,
+  country,
+  job,
+  skills,
+  languages,
+}) => {
+  const formattedSkills = skills.slice(0, -1).join(", ");
+  const formattedLanguages = languages.slice(0, -1).join(", ");
+
+  personInfo = `${firstName} ${lastName} lives in ${country}. He is ${age} years old. He is an ${job}. He teaches ${formattedSkills} and ${
+    skills[skills.length - 1]
+  }. He speaks ${formattedLanguages} and a little bit of ${languages[1]} `;
+
+  return personInfo;
+};
+
+console.log(getPersonInfo2(person));
+
+const todoList = [
+{
+  task:'Prepare JS Test',
+  time:'4/1/2020 8:30',
+  completed:true
+},
+{
+  task:'Give JS Test',
+  time:'4/1/2020 10:00',
+  completed:false
+},
+{
+  task:'Assess Test Result',
+  time:'4/1/2020 1:00',
+  completed:false
+}
+]
+
+for (const {task, time, completed} of todoList) {
+  console.log(task, time, completed);
+}
+
+const nums2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let [numOnee, numTwoo, numThreee, ...rest] = nums2
+
+console.log(numOnee, numTwoo, numThreee)
+console.log(rest)
+
+const countries2 = [
+  'Germany',
+  'France',
+  'Belgium',
+  'Finland',
+  'Sweden',
+  'Norway',
+  'Denmark',
+  'Iceland'
+]
+
+let [ger, fra, ...nordic] = countries2
+console.log(ger, fra)
+console.log(nordic)
