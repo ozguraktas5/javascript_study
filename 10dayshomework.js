@@ -39,3 +39,19 @@ const countries2 = [
 const countriesMap = new Map(countries2)
 
 console.log(countriesMap)
+
+let cc = [...aa, ...bb]
+console.log(cc)
+
+let AA = new Set(aa)
+let BB = new Set(bb)
+
+let CC = aa.filter((num) => BB.has(num))
+
+console.log(CC)
+
+let differentAA = aa.filter((num) => !BB.has(num))
+let differentBB = bb.filter((num) => !AA.has(num))
+
+console.log(differentAA)
+console.log(differentBB)
