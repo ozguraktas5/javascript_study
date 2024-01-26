@@ -110,5 +110,15 @@ countriesMap2.set('Paris', 'France')
 console.log(countriesMap2)
 
 console.log(countriesMap2.get('Germany'))
+console.log(countriesMap2.has('Turkey'))
+
+for(const country of countriesMap2) {
+  console.log(country)
+}
+
+for(const [country, city] of countriesMap2) {
+  console.log(country, city)
+}
+
 
 
