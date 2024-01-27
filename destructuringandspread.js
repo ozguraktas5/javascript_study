@@ -203,3 +203,27 @@ const countries2 = [
 let [ger, fra, ...nordic] = countries2
 console.log(ger, fra)
 console.log(nordic)
+
+const evens = [0, 2, 4, 6, 8, 10]
+const evenNumbers = [...evens]
+console.log(evenNumbers)
+
+const odds = [1, 3, 5, 7, 9]
+const oddNumbers = [...odds]
+console.log(oddNumbers)
+
+const wholeNumbers = [...oddNumbers, ...evenNumbers]
+console.log(wholeNumbers)
+
+const user = {
+  name:'Asabeneh',
+  title:'Programmer',
+  country:'Finland',
+  city:'Helsinki'
+}
+
+const copiedUser = {...user}
+console.log(copiedUser)
+
+const copiedUser2 = {...user, title: 'Developer'}
+console.log(copiedUser2)
