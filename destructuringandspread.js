@@ -227,3 +227,19 @@ console.log(copiedUser)
 
 const copiedUser2 = {...user, title: 'Developer'}
 console.log(copiedUser2)
+
+const sumAllNums = (...args) => {
+  console.log(args)
+}
+
+sumAllNums(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+const sumAllNums2 = (...args) => {
+  let sum = 0
+  for(const num of args) {
+    sum += num
+  }
+  return sum
+}
+
+console.log(sumAllNums2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
