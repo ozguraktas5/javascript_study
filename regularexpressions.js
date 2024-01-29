@@ -120,3 +120,36 @@ const txt14 = 'Apple and banana are fruits'
 const matches14 = txt14.match(pattern14)
 
 console.log(matches14)
+
+const pattern15 = /[Ee]-?mail/g
+const txt15 = 'I am not sure if there is a convention how to write the word e-mail.\
+Some people write it email others may write it as Email or E-mail.'
+const matches15 = txt15.match(pattern15)
+
+console.log(matches15)
+
+const pattern16 = /\b\w{4}\b/g
+const txt16 = 'This regular expression example was made in December 6,  2019.'
+const matches16 = txt16.match(pattern16)
+
+console.log(matches16)
+
+const pattern17 = /\b[a-zA-Z]{4}\b/g
+const txt17 = 'This regular expression example was made in December 6,  2019.'
+const matches17 = txt17.match(pattern17)
+
+console.log(matches17)
+
+const txt18 = 'This regular expression example was made in December 6,  2019.'
+const pattern18 = /\d{4}/g
+const matches18 = txt18.match(pattern18)
+
+console.log(matches18)
+
+const txt19 = 'This regular expression example was made in December 6,  2019.'
+const pattern19 = /\d{1,4}/g
+const matches19 = txt19.match(pattern19)
+
+console.log(matches19)
+
+
