@@ -120,3 +120,57 @@ function convertArrayToObject(students) {
 }
 
 console.log(convertArrayToObject(students));
+
+const student2 = {
+  name: "David",
+  age: 25,
+  skills: {
+    frontEnd: [
+      { skill: "HTML", level: 10 },
+      { skill: "CSS", level: 8 },
+      { skill: "JS", level: 8 },
+      { skill: "React", level: 9 },
+    ],
+    backEnd: [
+      { skill: "Node", level: 7 },
+      { skill: "GraphQL", level: 8 },
+    ],
+    dataBase: [{ skill: "MongoDB", level: 7.5 }],
+    dataScience: ["Python", "R", "D3.js"],
+  },
+};
+
+const newStudent = {...student2}
+
+const frontendSkills = newStudent.skills.frontEnd;
+const hasBootstrap = frontendSkills.includes(skill => skill.skill === "Bootstrap");
+if (!hasBootstrap) {
+  frontendSkills.push({ skill: "Bootstrap", level: 8 });
+}
+
+console.log(newStudent)
+
+const backendSkills = newStudent.skills.backEnd;
+const hasExpress = backendSkills.includes(skill => skill.skill === "Express");
+if (!hasExpress) {
+  backendSkills.push({ skill: "Express", level: 9 });
+}
+
+console.log(newStudent)
+
+const databaseSkills = newStudent.skills.dataBase;
+const hasSQL = databaseSkills.includes(skill => skill.skill === "SQL");
+if (!hasSQL) {
+  databaseSkills.push({ skill: "SQL", level: 8 });
+}
+
+console.log(newStudent)
+
+const dataScienceSkills = newStudent.skills.dataScience;
+const hasSQL2 = dataScienceSkills.includes(skill => skill === "SQL");
+if (!hasSQL2) {
+  dataScienceSkills.push("SQL");
+}
+
+console.log(newStudent)
+
