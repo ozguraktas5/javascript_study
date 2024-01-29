@@ -81,3 +81,16 @@ const lessThanTwoSkills = (users) => {
 }
 
 console.log(lessThanTwoSkills(users))
+
+import countries_data from "./countries_data.js"
+
+const destructureTheCountries = (countries_data) => {
+  for(const country of countries_data) {
+    console.log(country.name)
+    console.log(country.capital)
+    console.log(country.population)
+    console.log(country.languages)
+  }
+}
+
+console.log(destructureTheCountries(countries_data))
