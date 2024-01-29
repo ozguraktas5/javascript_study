@@ -152,4 +152,24 @@ const matches19 = txt19.match(pattern19)
 
 console.log(matches19)
 
+const txt20 = 'This regular expression example was made in December 6,  2019.'
+const pattern20 = /^This/
+const matches20 = txt20.match(pattern20)
+
+console.log(matches20)
+
+const txt21 = 'This regular expression example was made in December 6,  2019.'
+const pattern21 = /[^A-Za-z,. ]+/g
+const matches21 = txt21.match(pattern21)
+
+console.log(matches21)
+
+const pattern22 = /^[A-Z][a-z]{3,12}$/
+let name2 = 'Ozgur'
+let result = pattern22.test(name2)
+
+console.log(result)
+
+
+
 
