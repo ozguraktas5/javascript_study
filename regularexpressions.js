@@ -90,3 +90,33 @@ const txt9 =
 const matches9 = txt9.match(pattern9)
 
 console.log(matches9)
+
+const pattern10 = /\d/g
+const txt10 = 'This regular expression example was made in January 12,  2020.'
+const matches10 = txt10.match(pattern10)
+
+console.log(matches10)
+
+const pattern11 = /\d+/g
+const txt11 = 'This regular expression example was made in January 12,  2020.'
+const matches11 = txt11.match(pattern11)
+
+console.log(matches11)
+
+const pattern12 = /[a]./g
+const txt12 = 'Apple and banana are fruits'
+const matches12 = txt12.match(pattern12)
+
+console.log(matches12)
+
+const pattern13 = /[a].+/g
+const txt13 = 'Apple and banana are fruits'
+const matches13 = txt13.match(pattern13)
+
+console.log(matches13)
+
+const pattern14 = /[a].*/g
+const txt14 = 'Apple and banana are fruits'
+const matches14 = txt14.match(pattern14)
+
+console.log(matches14)
