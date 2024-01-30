@@ -19,3 +19,20 @@ const maxNumber = parseInt(points[points.length - 1])
 const distance = maxNumber + Math.abs(minNumber)
 
 console.log(distance)
+
+function isValidVariable(variableName) {
+    if (!variableName || /^\d/.test(variableName)) {
+        return false
+    }
+
+    if (!/^[a-zA-Z0-9_]+$/.test(variableName)) {
+        return false
+    }
+
+    return true
+}
+
+console.log(isValidVariable('first_name'))
+console.log(isValidVariable('first-name'))
+console.log(isValidVariable('1first_name'))
+console.log(isValidVariable('firstname'))
