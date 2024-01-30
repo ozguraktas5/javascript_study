@@ -43,29 +43,60 @@ console.log(isValidVariable("firstname"));
 const paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`;
 
 function tenMostFrequentWords(paragraph) {
-    const words = paragraph.match(/\b\w+\b/g)
-    
+  const words = paragraph.match(/\b\w+\b/g);
 
-    const wordCount = {}
-    words.forEach(function(word) {
-        if (wordCount[word]) {
-            wordCount[word]++
-        } else {
-            wordCount[word] = 1
-        }
-    })
+  const wordCount = {};
+  words.forEach(function (word) {
+    if (wordCount[word]) {
+      wordCount[word]++;
+    } else {
+      wordCount[word] = 1;
+    }
+  });
 
-    const sortedWords = Object.keys(wordCount).sort(function(a,b) {
-        return wordCount[b] - wordCount[a]
-    })
+  const sortedWords = Object.keys(wordCount).sort(function (a, b) {
+    return wordCount[b] - wordCount[a];
+  });
 
-    const tenWords = sortedWords.slice(0, 10)
+  const tenWords = sortedWords.slice(0, 10);
 
-    const result = tenWords.map(function(word) {
-        return {word: word, count: wordCount[word]}
-    })
+  const result = tenWords.map(function (word) {
+    return { word: word, count: wordCount[word] };
+  });
 
-    return result
+  return result;
 }
 
-console.log(tenMostFrequentWords(paragraph))
+console.log(tenMostFrequentWords(paragraph));
+
+const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`;
+const matches2 = sentence.replace(/[%$@&#;!,]/g, "");
+
+console.log(matches2);
+
+function threeMostFrequentWords(matches2) {
+  const words2 = matches2.match(/\b\w+\b/g);
+
+  const wordCount2 = {};
+  words2.forEach(function (word2) {
+    if (wordCount2[word2]) {
+      wordCount2[word2]++;
+    } else {
+      wordCount2[word2] = 1;
+    }
+  });
+
+  const sortedWords2 = Object.keys(wordCount2).sort(function (a, b) {
+    return wordCount2[b] - wordCount2[a];
+  });
+
+  const threeWords = sortedWords2.slice(0, 3);
+
+  const result = threeWords.map(function (word) {
+    return { word: word, count: wordCount2[word] };
+  });
+
+  return result
+}
+
+console.log(threeMostFrequentWords(matches2));
