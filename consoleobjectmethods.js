@@ -101,3 +101,16 @@ countries.forEach(([name, city]) => {
   console.log(name, city);
 });
 console.timeEnd("forEach loop");
+
+console.info('30 Days Of JavaScript challenge is trending on Github')
+
+console.info('30 Days Of fullStack challenge might be released')
+
+console.assert(4 > 3, '4 is greater than 3')
+console.assert(3 > 4, '3 is not greater than 4')
+
+for (let i = 0; i <= 10; i += 1) {
+  let errorMessage = `${i} is not even`
+  console.log('the # is ' + i)
+  console.assert(i % 2 === 0, { number: i, errorMessage: errorMessage })
+}
