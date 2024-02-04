@@ -172,3 +172,11 @@ console.log(user3)
 console.log(users3)
 console.groupEnd()
 
+const func = () => {
+  console.count('Function has been called')
+}
+
+func()
+func()
+func()
+
