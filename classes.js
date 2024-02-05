@@ -195,3 +195,71 @@ console.log(person16.score)
 
 console.log(person15.skills)
 console.log(person16.skills)
+
+class Person10 {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.country = country;
+    this.city = city;
+    this.score = 0;
+    this.skills = [];
+  }
+  getFullName() {
+    const fullName = this.firstName + " " + this.lastName;
+    return fullName
+  }
+
+  get getScore() {
+    return this.score;
+  }
+
+  get getSkills() {
+    return this.skills;
+  }
+
+  set setScore(score) {
+    this.score += score;
+  }
+
+  set setSkill(skill) {
+    this.skills.push(skill);
+  }
+
+  getPersonInfo() {
+    let fullName = this.getFullName()
+    let skills =
+        this.skills.length > 0 &&
+        this.skills.slice(0, this.skills.length - 1).join(', ') + ` and ${this.skills[this.skills.length - 1]}`
+    let formattedSkills = skills ? `He knows ${skills}` : ''
+
+    let info = `${fullName} is ${this.age}. He lives ${this.city}, ${this.country}. ${formattedSkills}`
+    return info
+  }
+}
+
+const person17 = new Person10("Taylan","Sönmez",24, "Türkiye","Malatya")
+const person18 = new Person10("Merve","Kaya",22, "Türkiye","Sinop")
+const person19 = new Person10("Alim","Öztürk",60,"Türkiye","Edirne")
+
+person17.setScore = 1
+person17.setSkill = 'HTML'
+person17.setSkill = 'CSS'
+person17.setSkill = 'JavaScript'
+
+person18.setScore = 1
+person18.setSkill = 'Planning'
+person18.setSkill = 'Managing'
+person18.setSkill = 'Organizing'
+
+console.log(person17.getScore)
+console.log(person18.getScore)
+
+console.log(person17.getSkills)
+console.log(person18.getSkills)
+console.log(person19.getSkills)
+
+console.log(person17.getPersonInfo())
+console.log(person18.getPersonInfo())
+console.log(person19.getPersonInfo())
