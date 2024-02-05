@@ -33,3 +33,33 @@ const person5 = new Person3("Alev","Yılmaz");
 console.log(person3)
 console.log(person4)
 console.log(person5)
+
+class Person4 {
+    constructor(firstName, lastName, age, country, city) {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.age = age
+        this.country = country
+        this.city = city
+    }
+}
+
+const person6 = new Person4("Sinan","Yeşil",27,"Türkiye","İstanbul");
+
+console.log(person6)
+
+class Person5 {
+    constructor(firstName = "Ali", lastName = "Çelebi", age = 31, country = "Türkiye", city = "Adıyaman") {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.age = age
+        this.country = country
+        this.city = city
+    }
+}
+
+const person7 = new Person5();
+const person8 = new Person5("Dilek", "Çiçek", 37, "Türkiye", "Mersin");
+
+console.log(person7)
+console.log(person8)
