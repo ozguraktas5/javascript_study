@@ -145,3 +145,53 @@ console.log(person14.getScore)
 
 console.log(person13.getSkills)
 console.log(person14.getSkills)
+
+class Person9 {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.country = country;
+    this.city = city;
+    this.score = 0;
+    this.skills = [];
+  }
+  getFullName() {
+    const fullName = this.firstName + " " + this.lastName;
+    return fullName;
+  }
+  get getScore() {
+    return this.score;  
+  }
+
+  get getSkills() {
+    return this.skills;
+  }
+  
+  set setScore(score) {
+    this.score += score;
+  }
+
+  set setSkill(skills) {
+    this.skills.push(skills);
+  }
+}
+
+const person15 = new Person9("Murat","Bulut",30, "Türkiye","Ordu")
+const person16 = new Person9("Eren","Yılmaz",27, "Türkiye","Sivas")
+
+person15.setScore = 1
+person15.setSkill = "Java"
+person15.setSkill = "Python"
+person15.setSkill = "JavaScript"
+
+person16.setScore = 2
+person16.setSkill = "C++"
+person16.setSkill = "C#"
+person16.setSkill = "Php"
+
+console.log(person15.score)
+console.log(person16.score)
+
+console.log(person15.skills)
+console.log(person16.skills)
