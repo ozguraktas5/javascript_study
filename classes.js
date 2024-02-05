@@ -63,3 +63,23 @@ const person8 = new Person5("Dilek", "Çiçek", 37, "Türkiye", "Mersin");
 
 console.log(person7)
 console.log(person8)
+
+class Person6 {
+    constructor(firstName, lastName, age, country, city) {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.age = age
+        this.country = country
+        this.city = city
+    }
+    getFullName() {
+        const fullName = this.firstName + ' ' + this.lastName
+        return fullName
+    }
+}
+
+const person9 = new Person6("Aslı","Deniz", 19, "Türkiye", "Ankara")
+const person10 = new Person6("Ceren","Aydoğdu", 23, "Türkiye", "İzmir")
+
+console.log(person9.getFullName())
+console.log(person10.getFullName())
