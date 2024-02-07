@@ -342,3 +342,58 @@ console.log(s1)
 console.log(s1.saySomething())
 console.log(s1.getFullName())
 console.log(s1.getPersonInfo())
+
+class Student2 extends Person11 {
+  constructor (firstName, lastName, age, country, city, gender) {
+    super(firstName, lastName, age, country, city)
+    this.gender = gender
+  }
+
+  saySomething() {
+    console.log('I am a child of the person class')
+  }
+
+  getPersonInfo() {
+    let fullName = this.getFullName()
+    let skills = 
+      this.skills.length > 0 &&
+      this.skills.slice(0, this.skills.length - 1).join(', ') +
+        ` and ${this.skills[this.skills.length - 1]}`
+
+    let formattedSkills = skills ? `He knows ${skills}` : ''
+    let pronoun = this.gender == 'Male' ? 'He' : 'She'
+
+    let info = `${fullName} is ${this.age}. ${pronoun} lives in ${this.city}, ${this.country}. ${formattedSkills}`
+    return info
+  }
+}
+
+const a1 = new Student2(
+  'Nazım',
+  'Gürsoy',
+  52,
+  "Türkiye",
+  "Aydın",
+  "Male"
+)
+
+const a2 = new Student2("Aysun", "Kaya", 22, "Türkiye", "Istanbul", "Female")
+a1.setScore = 1
+a1.setSkill = 'HTML'
+a1.setSkill = 'CSS'
+a1.setSkill = 'JS'
+
+a2.setScore = 1
+a2.setSkill = 'Planning'
+a2.setSkill = 'Managing'
+a2.setSkill = 'Organizing'
+
+console.log(a1)
+
+console.log(a1.saySomething())
+console.log(a1.getFullName())
+console.log(a1.getPersonInfo())
+
+console.log(a2.saySomething())
+console.log(a2.getFullName())
+console.log(a2.getPersonInfo())
