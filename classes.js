@@ -330,3 +330,15 @@ class Person11 {
 
 console.log(Person11.favoriteSkill())
 console.log(Person11.showDateTime())
+
+class Student extends Person11 {
+  saySomething() {
+    console.log('I am a child of the person class')
+  }
+}
+
+const s1 = new Student('Merve', 'Kaya', 22, 'Türkiye', 'Sinop')
+console.log(s1)
+console.log(s1.saySomething())
+console.log(s1.getFullName())
+console.log(s1.getPersonInfo())
