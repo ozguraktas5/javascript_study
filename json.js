@@ -178,3 +178,18 @@ const users = {
 
 const txt = JSON.stringify(users, undefined, 4)
 console.log(txt)
+
+const user = {
+  firstName: 'Ozgur',
+  lastName: 'Aktas',
+  country: 'Turkey',
+  city: 'Samsun',
+  email: 'ozgur@ozgur.com',
+  skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Python'],
+  age: 32,
+  isLoggedIn: false,
+  points: 55
+}
+
+const txt2 = JSON.stringify(user, ['firstName', 'lastName', 'country', 'city', 'age'], 4)
+console.log(txt2)
