@@ -90,6 +90,30 @@ class Statistics {
     }
     return Math.round(sum / this.data.length);
   }
+  standardDeviation() {
+    return Math.sqrt(this.variance()).toFixed(1);
+  }
+  min() {
+    return Math.min(...this.data);
+  }
+  max() {
+    return Math.max(...this.data);
+  }
+  count() {
+    return this.data.length;
+  }
+  percentile() {
+    return Math.round((this.data.length * 100) / 100);
+  }
+  frequencyDistribution() {
+    let sorted = this.data.sort((a, b) => a - b);
+    let frequency = [];
+    for (let i = 0; i < sorted.length; i++) {
+      frequency.push(this.data.filter((x) => x === sorted[i]).length);
+
+    }
+    return frequency;
+  }
 }
 let stats = new Statistics(ages);
 console.log(`The Mean is: ${stats.mean()}`);
@@ -97,3 +121,9 @@ console.log(`The Median is: ${stats.median()}`);
 console.log(`The Mode is: ${stats.mode()}`);
 console.log(`The Range is: ${stats.range()}`);
 console.log(`The Variance is: ${stats.variance()}`);
+console.log(`The Standard Deviation is: ${stats.standardDeviation()}`);
+console.log(`The Minimum is: ${stats.min()}`);
+console.log(`The Maximum is: ${stats.max()}`);
+console.log(`The Count is: ${stats.count()}`);
+console.log(`The Percentile is: ${stats.percentile()}`);
+console.log(`The Frequency Distribution is: ${stats.frequencyDistribution()}`);
