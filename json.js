@@ -188,7 +188,7 @@ const user = {
   skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Python'],
   age: 32,
   isLoggedIn: false,
-  points: 55
+  points: 55  
 }
 
 const txt2 = JSON.stringify(user, ['firstName', 'lastName', 'country', 'city', 'age'], 4)
