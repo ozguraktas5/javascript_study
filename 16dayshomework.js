@@ -64,3 +64,9 @@ console.log(studentJSON)
 const txt2 = JSON.stringify(student, ['firstName', 'lastName', 'skills'],4)
 console.log(txt2)
 
+const txtObject = JSON.parse(txt)
+console.log(txtObject)
+
+const usersWithManySkills = Object.keys(txtObject).filter(user => txtObject[user].skills.length > 3);
+console.log(usersWithManySkills)
+
