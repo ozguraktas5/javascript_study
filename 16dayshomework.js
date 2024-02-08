@@ -58,5 +58,9 @@ console.log(ageJSON)
 const isMarriedJSON = JSON.stringify(isMarried);
 console.log(isMarriedJSON)
 
+const studentJSON = JSON.stringify(student);
+console.log(studentJSON)
 
+const txt2 = JSON.stringify(student, ['firstName', 'lastName', 'skills'],4)
+console.log(txt2)
 
