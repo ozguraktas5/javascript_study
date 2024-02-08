@@ -38,3 +38,14 @@ const user = {
 
 const userText = JSON.stringify(user, undefined, 4)
 console.log(userText)
+
+let firstName3 = localStorage.getItem('firstName')
+let age3 = localStorage.getItem('age')
+let skills3 = localStorage.getItem('skills')
+console.log(firstName3, age3, skills3)
+
+console.log(localStorage)
+
+localStorage.clear()
+
+console.log(localStorage)
