@@ -29,4 +29,54 @@ const hexaColor = () => {
 
 console.log(hexaColor())
 
+const showDateTime = () => {
+    const now = new Date()
+    const year = now.getFullYear()
+    const month = now.getMonth()
+    const date = now.getDate()
+    let hours = now.getHours()
+    let minutes = now.getMinutes()
+    if (hours < 10) {
+        hours = '0' + hours
+
+    }
+    if (minutes < 10) {
+        minutes = '0' + minutes
+    }
+
+    const dateMonthYear = date + '.' + month + '.' + year
+    const time = hours + ':' + minutes
+    const fullTime = dateMonthYear + ' ' + time
+    return fullTime
+}
+
+console.log(showDateTime())
+
+const names2 = ['Raman', 'Mathias', 'Elias', 'Brook']
+
+let len = names2.length
+for (let i = 0; i < len; i++) {
+    console.log(names2[i].toUpperCase())
+}
+
+for (const name2 of names2) {
+    console.log(name2.toUpperCase())
+}
+
+names2.forEach((name2) => console.log(name2.toUpperCase()))
+
+const person = {
+    firstName: 'Ozgur',
+    lastName: 'Aktas',
+    age: 32,
+    country: 'Turkey',
+    city: 'Samsun',
+    skills: ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python'],
+    isMarried: true
+
+}
+
+for(const value in person){
+    console.log(person[value])
+}
 
