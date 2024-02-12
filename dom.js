@@ -35,3 +35,10 @@ allTitles3.forEach(title => console.log(title))
 const titles = document.querySelectorAll('h1')
 titles[3].className = 'title'
 titles[3].id = 'fourth-title'
+
+const titles2 = document.querySelectorAll('h1')
+titles2[4].setAttribute('class', 'title')
+titles2[4].setAttribute('id', 'fifth-title')
+
+titles[3].classList.add('title', 'header-title')
+titles[3].classList.remove('title', 'header-title')
