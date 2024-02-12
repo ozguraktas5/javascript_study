@@ -58,3 +58,26 @@ const lists = `
 
 const ul = document.querySelector('ul')
 ul.innerHTML = lists
+ul.innerHTML = ''
+
+const titles4 = document.querySelectorAll('h1')
+titles4.forEach((title, i) => {
+    title.style.fontSize = '24px'
+    if (i % 2 === 0) {
+        title.style.color = 'green'
+    } else {
+        title.style.color = 'red'
+    }
+})
+
+const titles5 = document.querySelectorAll('h1')
+titles5.forEach((title, i) => {
+    title.style.fontSize = '24px'
+    if (i % 2 === 0) {
+        title.style.fontSize = '20px'
+    } else {
+        title.style.fontSize = '30px'
+    }
+})
+
+
