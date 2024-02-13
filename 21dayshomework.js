@@ -33,3 +33,23 @@ allPe[2].id = 'third-p'
 
 allPe[3].setAttribute('class', 'p')
 allPe[3].setAttribute('id', 'fourth-p')
+
+allPe[0].style.backgroundColor = 'red'
+allPe[1].style.backgroundColor = 'green'
+allPe[2].style.backgroundColor = 'blue'
+allPe[3].style.backgroundColor = 'yellow'
+
+allPe[0].style.color = 'black'
+allPe[1].style.color = 'white'
+allPe[2].style.color = 'black'
+allPe[3].style.color = 'white'
+
+allPe[0].style.fontSize = '24px'
+allPe[1].style.fontSize = '24px'
+allPe[2].style.fontSize = '24px'
+allPe[3].style.fontSize = '24px'
+
+allPe[0].style.border = '5px solid black'
+allPe[1].style.border = '5px solid black'
+allPe[2].style.border = '5px solid black'
+allPe[3].style.border = '5px solid black'
