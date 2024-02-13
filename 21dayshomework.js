@@ -119,4 +119,19 @@ updateDateTime()
 setInterval(updateDateTime, 1000)
 setInterval(changeBackgroundColor, 1000)
 
+let doneItem = document.querySelectorAll('.done')
+let ongoingItem = document.querySelectorAll('.ongoing')
+let comingItem = document.querySelectorAll('.coming')
+
+doneItem.forEach(function(task) {
+    task.style.backgroundColor = 'green'
+})
+
+ongoingItem.forEach(function(task) {
+    task.style.backgroundColor = 'yellow'
+})
+
+comingItem.forEach(function(task) {
+    task.style.backgroundColor = 'red'
+})
 
