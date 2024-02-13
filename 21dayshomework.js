@@ -92,4 +92,31 @@ function changeYearColor() {
 
 setInterval(changeYearColor, 1000)
 
+function updateDateTime() {
+    let now = new Date()
+    let date = now.toDateString()
+    let time = now.toLocaleTimeString()
+
+    document.getElementById('datetime').innerHTML = date + ' ' + time
+
+}
+
+function changeBackgroundColor() {
+    let container = document.getElementById('datetime-container')
+    let colors = ['blue', 'red', 'green', 'yellow', 'gray', 'brown', 'purple', 'orange']
+    let currentColor = container.style.backgroundColor
+    let randomColor
+
+    do {
+        randomColor = colors[Math.floor(Math.random() * colors.length)]
+    } while (randomColor === currentColor)
+
+    container.style.backgroundColor = randomColor
+}
+
+updateDateTime()
+
+setInterval(updateDateTime, 1000)
+setInterval(changeBackgroundColor, 1000)
+
 
