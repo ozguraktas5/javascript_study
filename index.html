@@ -26,6 +26,7 @@
     <!-- <script src="./18dayshomework.js"></script> -->
     <!-- <script src="./19dayshomework.js"></script> -->
     <!-- <script type="module" src="./21dayshomework.js"></script> -->
+    <script src="./22dayshomework.js"></script>
     <!-- <script type="module" src="./Main.js"></script> -->
     <!-- <script src="./diziler.js"></script> -->
     <!-- <script src="./kosullar.js"></script> -->
@@ -47,7 +48,7 @@
     <!-- <script src="./closures.js"></script> -->
     <!-- <script src="./writingcleancodes.js"></script> -->
     <!-- <script type="module" src="./dom.js"></script> -->
-    <script type="module" src="./manipulatingdomobject.js"></script>
+    <!-- <script type="module" src="./manipulatingdomobject.js"></script> -->
   </head>
   <body>
     <!-- <button onclick="alert('Welcome to 30DaysOfJavaScript!')">Click Me</button> -->
@@ -84,6 +85,39 @@
             <li class="ongoing">30DaysOfMachineLearning Challenge Ongoing</li>
         </ul>
     </div> -->
-    
+    <div class='container'></div>
+    <script>
+      function isPrime(number) {
+        if (number <= 1) {
+          return false;
+        }
+
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i === 0) {
+            return false;
+          }
+        }
+        return true
+      }
+
+      const container = document.querySelector('.container')
+
+      for (let i = 0; i < 102; i++) {
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.style.fontSize = '24px';
+        title.textContent = i;
+        
+
+        if (isPrime(i)) {
+          title.style.backgroundColor = 'red';          
+        } else if (i % 2 === 0) {
+          title.style.backgroundColor = 'green';
+        } else {
+          title.style.backgroundColor = 'yellow';
+        }
+        container.appendChild(title)
+      }
+    </script>
   </body>
 </html>
