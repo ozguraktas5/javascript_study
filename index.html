@@ -55,7 +55,7 @@
 
     <!-- <script>
       console.log("bu benim ilk internal scriptim!");
-    </script> -->
+    </scr> -->
     <!-- <h1 class='title' id='first-title'>First Title</h1>
     <h1 class='title' id='second-title'>Second Title</h1>
     <h1 class='title' id='third-title'>Third Title</h1>
@@ -87,37 +87,9 @@
     </div> -->
     <div class='container'></div>
     <script>
-      function isPrime(number) {
-        if (number <= 1) {
-          return false;
-        }
+       
 
-        for (let i = 2; i <= Math.sqrt(number); i++) {
-          if (number % i === 0) {
-            return false;
-          }
-        }
-        return true
-      }
-
-      const container = document.querySelector('.container')
-
-      for (let i = 0; i < 102; i++) {
-        const title = document.createElement('div');
-        title.className = 'title';
-        title.style.fontSize = '24px';
-        title.textContent = i;
-        
-
-        if (isPrime(i)) {
-          title.style.backgroundColor = 'red';          
-        } else if (i % 2 === 0) {
-          title.style.backgroundColor = 'green';
-        } else {
-          title.style.backgroundColor = 'yellow';
-        }
-        container.appendChild(title)
-      }
+      
     </script>
   </body>
 </html>
