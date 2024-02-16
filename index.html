@@ -26,7 +26,6 @@
     <!-- <script src="./18dayshomework.js"></script> -->
     <!-- <script src="./19dayshomework.js"></script> -->
     <!-- <script type="module" src="./21dayshomework.js"></script> -->
-    <script src="./22dayshomework.js"></script>
     <!-- <script type="module" src="./Main.js"></script> -->
     <!-- <script src="./diziler.js"></script> -->
     <!-- <script src="./kosullar.js"></script> -->
@@ -49,9 +48,14 @@
     <!-- <script src="./writingcleancodes.js"></script> -->
     <!-- <script type="module" src="./dom.js"></script> -->
     <!-- <script type="module" src="./manipulatingdomobject.js"></script> -->
+    <script src="./eventlisteners.js"></script>
   </head>
   <body>
     <!-- <button onclick="alert('Welcome to 30DaysOfJavaScript!')">Click Me</button> -->
+
+    <!-- <button>Click Me</button> -->
+
+    <button onclick="clickMe()">Click Me</button>
 
     <!-- <script>
       console.log("bu benim ilk internal scriptim!");
@@ -85,11 +89,22 @@
             <li class="ongoing">30DaysOfMachineLearning Challenge Ongoing</li>
         </ul>
     </div> -->
-    <div class='container'></div>
+    <!-- <div class="container"></div> -->
     <script>
-       
+      // const button = document.querySelector('button')
 
-      
+      // button.addEventListener('click', e => {
+      //   console.log('e gives the event listener object:', e)
+      //   console.log('e.target gives the selected element:', e.target)
+      //   console.log(
+      //     'e.target.textContent gives content of selected element: ',
+      //     e.target.textContent
+      //   )
+      // })
+
+      const clickMe = () => {
+        alert('We can attach event on HTML element')
+      }
     </script>
   </body>
 </html>
