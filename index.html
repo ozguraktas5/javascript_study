@@ -59,7 +59,13 @@
 
     <!-- <button>Click Me</button> -->
 
-    <button>Click Me</button>
+    <!-- <button>Click Me</button> -->
+
+    <h1>Body Mass Index Calculator</h1>
+
+    <input type="text" id="mass" placeholder="Mass in Kilogram" />
+    <input type="text" id="height" placeholder="Height in Meters"/>
+    <button>Calculate BMI</button>
 
     <!-- <script>
       console.log("bu benim ilk internal scriptim!");
@@ -119,14 +125,25 @@
       //   )
       // })
 
+      // const button = document.querySelector('button')
+      // button.addEventListener('mouseenter', e => {
+      //   console.log('e gives the event listener object:', e)
+      //   console.log('e.target gives the selected element: ', e.target)
+      //   console.log(
+      //     'e.target.textContent gives content of selected element: ',
+      //     e.target.textContent
+      //   )
+      // })
+
+      const mass = document.querySelector('#mass')
+      const height = document.querySelector('#height')
       const button = document.querySelector('button')
-      button.addEventListener('mouseenter', e => {
-        console.log('e gives the event listener object:', e)
-        console.log('e.target gives the selected element: ', e.target)
-        console.log(
-          'e.target.textContent gives content of selected element: ',
-          e.target.textContent
-        )
+
+      let bmi
+      button.addEventListener('click', () => {
+        bmi = mass.value / (height.value * height.value)
+        alert(`Your bmi is ${bmi.toFixed(2)}`)
+        console.log(bmi.toFixed(2))
       })
     </script>
   </body>
