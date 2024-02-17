@@ -33,7 +33,13 @@
         }
         .output {
             text-align: center;
-            padding: 5rem;
+            padding: 2rem 10rem;
+        }
+        .output > .number {
+            margin-right: 1rem;
+            padding: 0.7rem 2rem;
+            color: white;
+            font-size: 1.6rem;
         }
     </style>
 </head>
@@ -59,9 +65,31 @@
             }
 
             for (let i = 0; i <= numberInput; i++) {
-                outputDiv.innerHTML += i + ' '
+                let backgroundColor = ''
+                if (i % 2 === 0) {
+                    backgroundColor = 'green'
+                } else {
+                    backgroundColor = 'yellow'
+                }
+                if (isPrime()) {
+                    backgroundColor = 'red'
+                }
+                outputDiv.innerHTML += '<span class="number" style="background-color:' + backgroundColor + '">' + i + '</span>'
             }
 
+        }
+
+        function isPrime(num) {
+            if (num <= 1) {
+                return false
+            }
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false
+                }
+            }
+            return true
         }
     </script>
 </body>
