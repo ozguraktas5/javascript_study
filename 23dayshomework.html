@@ -35,14 +35,15 @@
             padding: 2rem 10rem;
             display: flex;
             gap: 0.3rem;
-            
             align-items: center;
             flex-wrap: wrap;
+            
         }
         .output > .number {
             padding: 0.5rem 1.7rem;
             color: white;
             font-size: 1.6rem;
+            width: 1.2rem;
         }
     </style>
 </head>
@@ -74,7 +75,7 @@
                 } else {
                     backgroundColor = 'yellow'
                 }
-                if (isPrime()) {
+                if (isPrime(i)) {
                     backgroundColor = 'red'
                 }
                 outputDiv.innerHTML += '<span class="number" style="background-color:' + backgroundColor + '">' + i + '</span>'
