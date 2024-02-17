@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 Days Homework</title>
+    <style>
+        
+        .title {
+            text-align: center;
+            color: rgb(54, 128, 54);
+            font-size: 2.5rem;
+        }
+        .day {
+            text-align: center;
+
+        }
+        .author {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+            
+        }
+        div > input {
+            padding: 0.5rem 1rem;
+            width: 30rem;
+        }
+        div > button {
+            padding: 0.5rem 1rem;
+            background-color: rgb(54, 128, 54);
+            color: white;
+        }
+        .output {
+            text-align: center;
+            padding: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Number Generator</h1>
+    <h2 class="day">30DaysOfJavaScript:DOM Day 3</h2>
+    <p class="author">Author: Ozgur Aktas</p>
+    <div>
+        <input type="number" class="numberInput" placeholder="Generate more numbers...">
+        <button onclick="generateNumbers()">Generate numbers</button>
+    </div>
+    <div class="output"></div>
+    
+    <script>
+        function generateNumbers() {
+            let numberInput = document.querySelector(".numberInput").value
+            let outputDiv = document.querySelector(".output")
+            outputDiv.innerHTML = ''
+
+            if(isNaN(numberInput) || numberInput === '' || numberInput <= 0) {
+                outputDiv.innerHTML = 'Input value must a number'
+                return
+            }
+
+            for (let i = 0; i <= numberInput; i++) {
+                outputDiv.innerHTML += i + ' '
+            }
+
+        }
+    </script>
+</body>
+</html>
