@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23 Days Homework 2</title>
+    <style>
+      
+      #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 97vh;
+        }
+      #keyboardButton {
+        padding: 0.5rem 1rem;
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <button id="keyboardButton">Press any keyboard key</button>
+      <div id="output"></div>
+      <div id="keyboardInfo"></div>
+    </div>
+
+    <script>
+      function keyboardEventListener(event) {
+        document.getElementById(
+          "output"
+        ).innerText = `You pressed ${event.key}`;
+        document.getElementById(
+          "keyboardInfo"
+        ).innerText = `${event.keyCode}`;
+      }
+
+      document.addEventListener("keydown", keyboardEventListener);
+
+      document
+        .getElementById("keyboardButton")
+        .addEventListener("click", function () {
+          document.addEventListener("keydown", keyboardEventListener);
+        });
+    </script>
+  </body>
+</html>
