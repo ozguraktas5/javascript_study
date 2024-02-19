@@ -21,7 +21,15 @@
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 5px;
         padding: 3rem 20rem;
-
+      }
+      .description {
+        width: 350px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        padding: 3rem 20rem;
+        display: none;
+        margin: auto;
       }
 
       header > h1 {
@@ -67,7 +75,7 @@
       </div>
     </header>
     <main>
-      <img src="./images/earth.png" alt="" />
+      <img class="img" src="./images/earth.png" alt="earth" />
       <div class="description"></div>
     </main>
     <script>
@@ -75,9 +83,19 @@
         let massInput = document.querySelector(".mass");
         let planetSelect = document.querySelector(".planet");
         let description = document.querySelector(".description");
+        let img = document.querySelector(".img");
 
         if (massInput.value === "" && planetSelect.value === "selectPlanet") {
-          description.innerHTML = "Mass is required";
+          description.textContent = "Mass is required";
+          img.style.display = "none";
+          description.style.display = "block";
+        } else if (massInput.value && planetSelect.value !== "selectPlanet") {
+          description.textContent = "You did not choose a planet yet";
+          img.style.display = "none";
+          description.style.display = "block";
+        } else {
+          description.textContent = "";
+          img.style.display = "block";
         }
       }
     </script>
