@@ -21,6 +21,7 @@
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 5px;
         padding: 3rem 20rem;
+        margin: auto;
       }
       .description {
         width: 350px;
@@ -60,15 +61,15 @@
         <input type="number" class="mass" placeholder="Mass in Kilogram" />
         <select name="planet" class="planet">
           <option value="selectPlanet">--select planet--</option>
-          <option value="0">MERCURY</option>
-          <option value="0.38">VENUS</option>
-          <option value="0.91">EARTH</option>
-          <option value="0.38">MOON</option>
-          <option value="0.38">MARS</option>
-          <option value="2.34">JUPITER</option>
-          <option value="1.06">SATURN</option>
-          <option value="0.92">URANUS</option>
-          <option value="1.19">NEPTUNE</option>
+          <option value="mercury">MERCURY</option>
+          <option value="venus">VENUS</option>
+          <option value="earth">EARTH</option>
+          <option value="moon">MOON</option>
+          <option value="mars">MARS</option>
+          <option value="jupiter">JUPITER</option>
+          <option value="saturn">SATURN</option>
+          <option value="uranus">URANUS</option>
+          <option value="neptune">NEPTUNE</option>
           <option value="pluto">PLUTO</option>
         </select>
         <button onclick="calculateWeight()">Calculate weight</button>
@@ -93,8 +94,12 @@
           description.textContent = "You did not choose a planet yet";
           img.style.display = "none";
           description.style.display = "block";
-        } else {
-          description.textContent = "";
+        } else if (massInput.value !== "" && planetSelect.value !== "selectPlanet"){
+          description.style.display = "none";
+
+          let planetName = planetSelect.value.toLowerCase();
+          img.src = `./images/${planetName}.png`;
+          img.alt = planetName;
           img.style.display = "block";
         }
       }
