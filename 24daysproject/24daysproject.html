@@ -52,22 +52,34 @@
         <input type="number" class="mass" placeholder="Mass in Kilogram" />
         <select name="planet" class="planet">
           <option value="selectPlanet">--select planet--</option>
-          <option value="mercury">MERCURY</option>
-          <option value="venus">VENUS</option>
-          <option value="earth">EARTH</option>
-          <option value="moon">MOON</option>
-          <option value="mars">MARS</option>
-          <option value="jupiter">JUPITER</option>
-          <option value="saturn">SATURN</option>
-          <option value="uranus">URANUS</option>
-          <option value="neptune">NEPTUNE</option>
+          <option value="0">MERCURY</option>
+          <option value="0.38">VENUS</option>
+          <option value="0.91">EARTH</option>
+          <option value="0.38">MOON</option>
+          <option value="0.38">MARS</option>
+          <option value="2.34">JUPITER</option>
+          <option value="1.06">SATURN</option>
+          <option value="0.92">URANUS</option>
+          <option value="1.19">NEPTUNE</option>
           <option value="pluto">PLUTO</option>
         </select>
-        <button>Calculate weight</button>
+        <button onclick="calculateWeight()">Calculate weight</button>
       </div>
     </header>
     <main>
       <img src="./images/earth.png" alt="" />
+      <div class="description"></div>
     </main>
+    <script>
+      function calculateWeight() {
+        let massInput = document.querySelector(".mass");
+        let planetSelect = document.querySelector(".planet");
+        let description = document.querySelector(".description");
+
+        if (massInput.value === "" && planetSelect.value === "selectPlanet") {
+          description.innerHTML = "Mass is required";
+        }
+      }
+    </script>
   </body>
 </html>
