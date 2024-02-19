@@ -15,6 +15,12 @@
         text-align: center;
         font-family: "Montserrat", sans-serif;
       }
+      main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+      }
       img {
         width: 350px;
         margin-top: 2rem;
@@ -22,6 +28,7 @@
         border-radius: 5px;
         padding: 3rem 20rem;
         margin: auto;
+        position: relative;
       }
       .description {
         width: 350px;
@@ -30,6 +37,8 @@
         border-radius: 5px;
         padding: 3rem 20rem;
         display: none;
+        position: absolute;
+        right: 0;
         margin: auto;
       }
 
@@ -86,21 +95,46 @@
         let description = document.querySelector(".description");
         let img = document.querySelector(".img");
 
+        const gravitational = {
+          mercury: 3.7,
+          venus: 8.9,
+          earth: 9.8,
+          moon: 1.6,
+          mars: 3.7,
+          jupiter: 23.1,
+          saturn: 9,
+          uranus: 8.7,
+          neptune: 11,
+          pluto: 0.7,
+        };
+
         if (massInput.value === "" && planetSelect.value === "selectPlanet") {
           description.textContent = "Mass is required";
           img.style.display = "none";
           description.style.display = "block";
-        } else if (massInput.value !== "" && planetSelect.value === "selectPlanet") {
+        } else if (
+          massInput.value !== "" &&
+          planetSelect.value === "selectPlanet"
+        ) {
           description.textContent = "You did not choose a planet yet";
           img.style.display = "none";
           description.style.display = "block";
-        } else if (massInput.value !== "" && planetSelect.value !== "selectPlanet"){
+        } else if (
+          massInput.value !== "" &&
+          planetSelect.value !== "selectPlanet"
+        ) {
           description.style.display = "none";
 
           let planetName = planetSelect.value.toLowerCase();
+          let gravity = gravitational[planetName];
+          let weightOnPlanet = (massInput.value * gravity).toFixed(2);
+
           img.src = `./images/${planetName}.png`;
           img.alt = planetName;
           img.style.display = "block";
+
+          description.textContent = `The weight of the object on ${planetName.toUpperCase()}\n${weightOnPlanet} N`;
+          description.style.display = "block";
         }
       }
     </script>
