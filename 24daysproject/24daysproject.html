@@ -89,7 +89,7 @@
           description.textContent = "Mass is required";
           img.style.display = "none";
           description.style.display = "block";
-        } else if (massInput.value && planetSelect.value !== "selectPlanet") {
+        } else if (massInput.value !== "" && planetSelect.value === "selectPlanet") {
           description.textContent = "You did not choose a planet yet";
           img.style.display = "none";
           description.style.display = "block";
